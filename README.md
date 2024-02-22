@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Movie Search Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a movie search web application built using React.js as part of a job interview assignment. The application allows users to search for movies by title and displays the results in a paginated table. It also provides sorting functionality by movie title and release year.
 
-## Available Scripts
+## Setup Instructions
 
-In the project directory, you can run:
+1. **Clone the Repository**
 
-### `npm start`
+  git clone https://github.com/arkadiklika/search-movies-app-venn.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Install Dependencies**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  cd search-movies-app-venn
+  npm install
 
-### `npm test`
+3. **Set Environment Variables**
+- Create a `.env` file in the root directory of the project.
+- Add the following line to the `.env` file:
+  ```
+  REACT_APP_MOVIES_API=https://jsonmock.hackerrank.com/api/movies
+  ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Run the Application**
 
-### `npm run build`
+  npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **Open in Browser**
+Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Functionality
 
-### `npm run eject`
+- **Search Movies**: Users can search for movies by entering the movie name in the search bar and clicking on the "Search" button.
+- **Pagination**: Displays a paginated table of search results with navigation buttons to go to the previous or next page.
+- **Sorting**: Users can sort the displayed movies by movie title or release year by clicking on the respective column headers.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## `fetchMovies` Function
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The `fetchMovies` function is responsible for fetching movie data from an external API. It is located in `src/services/movies_api.js`. Here's how it works:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- It is an asynchronous function that takes two parameters: `title` (the title of the movie to search for) and `page` (the page number of the search results).
+- It uses Axios to make an HTTP GET request to the specified API endpoint constructed using template literals.
+- Upon successful response from the API, it returns the data received.
+- If an error occurs during the request, it logs the error to the console and re-throws the error to be handled by the caller.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Environment Variables
 
-## Learn More
+Ensure you have set the environment variable `REACT_APP_MOVIES_API` containing the base URL of the movies API. In this project, it should be set to `https://jsonmock.hackerrank.com/api/movies`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Additional Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- This application fetches movie data from an external API. Make sure you have a stable internet connection to fetch the data.
+- The sorting functionality only sorts the displayed movies. It does not affect the actual data fetched from the API.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to reach out with any questions or feedback. Thank you for reviewing my code!
