@@ -9,6 +9,8 @@ import {
   Paper,
   Button,
   TableFooter,
+  Select,
+  MenuItem,
 } from "@mui/material";
 
 export default function MoviesTable({
@@ -46,6 +48,11 @@ export default function MoviesTable({
 
   const handleNextPage = () => {
     onPageChange(currentPage + 1);
+  };
+
+  const handlePageChange = (event) => {
+    const selectedPage = parseInt(event.target.value);
+    onPageChange(selectedPage);
   };
 
   return (
@@ -106,6 +113,19 @@ export default function MoviesTable({
             </TableCell>
             <TableCell>
               Page {currentPage} of {totalPages}
+            </TableCell>
+            <TableCell>
+              <Select
+                value={currentPage}
+                onChange={handlePageChange}
+                displayEmpty
+              >
+                {[...Array(totalPages).keys()].map((page) => (
+                  <MenuItem key={page + 1} value={page + 1}>
+                    {page + 1}
+                  </MenuItem>
+                ))}
+              </Select>
             </TableCell>
           </TableRow>
         </TableFooter>
