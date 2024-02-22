@@ -6,27 +6,19 @@ This is a movie search web application built using React.js as part of a job int
 
 1. **Clone the Repository**
 
-  git clone https://github.com/arkadiklika/search-movies-app-venn.git
+git clone https://github.com/arkadiklika/search-movies-app-venn.git
 
 2. **Install Dependencies**
 
-  cd search-movies-app-venn
-  npm install
+cd search-movies-app-venn
+npm install
 
-3. **Set Environment Variables**
-- Create a `.env` file in the root directory of the project.
-- Add the following line to the `.env` file:
-  ```
-  REACT_APP_MOVIES_API=https://jsonmock.hackerrank.com/api/movies
-  ```
+3. **Run the Application**
 
-4. **Run the Application**
+npm start
 
-  npm start
-
-
-5. **Open in Browser**
-Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
+4. **Open in Browser**
+   Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
 ## Functionality
 
