@@ -1,6 +1,6 @@
 # Movie Search Application
 
-This is a movie search web application built using React.js as part of a job interview assignment. The application allows users to search for movies by title and displays the results in a paginated table. It also provides sorting functionality by movie title and release year.
+This is a movie search web application built using React.js. The application allows users to search for movies by movie name and displays the results in a paginated table. It also provides sorting functionality by movie name and release year.
 
 ## Setup Instructions
 
