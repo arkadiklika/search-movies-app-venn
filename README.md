@@ -23,7 +23,7 @@ npm start
 ## Functionality
 
 - **Search Movies**: Users can search for movies by entering the movie name in the search bar and clicking on the "Search" button.
-- **Pagination**: Displays a paginated table of search results with navigation buttons to go to the previous or next page.
+- **Pagination**: Displays a paginated table of search results with navigation buttons to go to the previous or next page, or select a specific page from the dropdown list.
 - **Sorting**: Users can sort the displayed movies by movie title or release year by clicking on the respective column headers.
 
 ## `fetchMovies` Function
